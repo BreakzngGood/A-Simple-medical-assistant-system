@@ -20,3 +20,5 @@ scikit-image
 acids-rave
 open_clip_torch
 streamlit-drawable-canvas
+
+nltk
