@@ -345,16 +345,38 @@ def medicine_use(text):
 
 def medicine_picture_by_name(name):
     image_path = f'Datasets/Medicine_Picture/{name}.jpg'
-    print (image_path)
+    # print (image_path)
     return image_path
 
 # search medicine by text 
-def get_clip_embedding_from_PIL_image(image):
-    opencilp_model, preprocess = load_openclip_model()
-    image_tensor = preprocess(image).unsqueeze(0)
-    with torch.no_grad():
-        embedding = opencilp_model.encode_image(image_tensor).squeeze().numpy()
-    return embedding
+
+# def get_clip_embedding_from_PIL_image(image):
+#     opencilp_model, preprocess = load_openclip_model()
+#     image_tensor = preprocess(image).unsqueeze(0)
+#     with torch.no_grad():
+#         embedding = opencilp_model.encode_image(image_tensor).squeeze().numpy()
+#     return embedding
+
+# def generate_embeddings(image_directory):
+#     embedding_list = []
+#     id_list = []
+
+#     for image_name in os.listdir(image_directory):
+#         image_path = os.path.join(image_directory, image_name)
+#         item_id = os.path.splitext(image_name)[0]
+#         id_list.append((item_id))
+#         try:
+#             image = Image.open(image_path).convert("RGB")
+#             embedding = get_clip_embedding_from_PIL_image(image)
+#             embedding_list.append(embedding)
+#         except Exception as e:
+#             print(f"Error processing {image_name}: {e}")
+        
+#     return embedding_list, id_list
+
+# embedding_list, id_list = generate_embeddings(r'Medicine_Picture')
+# embedding_matrix_np = np.array(embedding_list)
+# id_array_np = np.array(id_list)
 
 def get_all_cosine_similarities(embeddings_matrix, embedding_vector):
         dot_product = embeddings_matrix @ embedding_vector
