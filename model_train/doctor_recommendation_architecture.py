@@ -1,13 +1,4 @@
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
 import torch
-import torch.nn as nn
-import torch.optim as optim
-import pandas as pd
-import numpy as np
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import accuracy_score
 
 class SpecialistNN(torch.nn.Module):
     def __init__(self, input_size, output_size):

@@ -1,18 +1,17 @@
 import os
 import numpy as np
-from PIL import Image
-import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 import torch
 import open_clip
 import pandas as pd
 import requests
+import medical_assistant_package.config as cfg
 
-model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32', pretrained='openai')
+model, _, preprocess = open_clip.create_model_and_transforms(cfg.OPENCLIP_MODEL_TYPE, pretrained='openai')
 model.eval()
 print("Model parameters:", f"{np.sum([int(np.prod(p.shape)) for p in model.parameters()]):,}")
 
-medicine_df = pd.read_csv(r"Datasets\Medicine_Details.csv")
+medicine_df = pd.read_csv(cfg.MEDICINE_CSV)
 
 # collect column name
 medicine_df_column_list = medicine_df.columns.to_list()[0:] 
@@ -53,11 +52,11 @@ medicine_url_list = medicine_df['Image URL'].to_list()
 for name,url in zip(medicine_name_list, medicine_url_list):
     download_medicine_image(name,"Medicine_Picture",url)
 
-# def get_clip_embedding_from_PIL_image(image):
-#     image_tensor = preprocess(image).unsqueeze(0)
-#     with torch.no_grad():
-#         embedding = model.encode_image(image_tensor).squeeze().numpy()
-#     return embedding
+def get_clip_embedding_from_PIL_image(image):
+    image_tensor = preprocess(image).unsqueeze(0)
+    with torch.no_grad():
+        embedding = model.encode_image(image_tensor).squeeze().numpy()
+    return embedding
 
-# medicine_use_df = medicine_df['Uses'].to_list
+medicine_use_df = medicine_df['Uses'].to_list
 

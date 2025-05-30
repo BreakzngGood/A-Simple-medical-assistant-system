@@ -4,7 +4,7 @@ import torch.optim as optim
 import torchvision.transforms as transforms
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
-import os
+import medical_assistant_package.config as cfg
 import torchvision.models as models
 
 class ClassificationNetwork(nn.Module):
@@ -25,8 +25,8 @@ num_classes = 22
 batch_size = 64
 learning_rate = 0.0001
 
-train_path = r"Datasets\SkinDisease\train"
-test_path = r"Datasets\SkinDisease\test"
+train_path = cfg.SKIN_DISEASE_TRAIN
+test_path = cfg.SKIN_DISEASE_TEST
 
 # Training Data Augmentation
 train_transform = transforms.Compose([
@@ -100,4 +100,4 @@ for epoch in range(num_epochs):
     # Save the Best Model
     if test_loss < best_loss:
         best_loss = test_loss
-        torch.save(model.state_dict(), 'best_resnet18_model.pt')    
+        torch.save(model.state_dict(), cfg.SKIN_DISEASE_MODEL)    

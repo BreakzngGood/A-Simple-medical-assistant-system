@@ -1,12 +1,7 @@
 import torch
-import torchvision
-
-import numpy as np
 import torch.nn as nn
 import torch.optim as optim
-import matplotlib.pyplot as plt
 import torch.nn.functional as F
-import torchvision.utils as vutils
 import torchvision.transforms as transforms
 
 from torch.utils.data import DataLoader
@@ -17,12 +12,11 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
-import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from torchvision.datasets import ImageFolder
-from PIL import Image
-import os
+
+import medical_assistant_package.config as cfg
 
 
 device = 'cpu'
@@ -34,8 +28,8 @@ num_epochs = 10
 num_classes = 22  
 batch_size = 100
 learn_rate = 0.001
-train_path = r"Datasets\SkinDisease\train"
-test_path = r"Datasets\SkinDisease\test"
+train_path = cfg.SKIN_DISEASE_TRAIN
+test_path = cfg.SKIN_DISEASE_TEST
 
 # Training Data Augmentation
 train_transform = transforms.Compose([
@@ -130,7 +124,7 @@ for epoch in range(num_epochs):
     # Save the Best Model
     if test_loss < best_loss:
         best_loss = test_loss
-        torch.save(model.state_dict(), 'best_skin_disease_model.pt')
+        torch.save(model.state_dict(), cfg.SKIN_DISEASE_MODEL)
 
     
     # The result of train loss and test loss is not good, so I have to choose the pretrained model.
