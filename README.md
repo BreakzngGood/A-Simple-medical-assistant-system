@@ -1,6 +1,6 @@
 > Notice: This medical system is in a very early stage of development and poses significant risks if used in real-world settings. Please do not rely on or reference it for medical advice or diagnosis.
 
-## 🧬 Siro
+# 🧬 Siro
 Siro is a simple medical assistant system deployed on Streamlit. It consists of five main functional modules:
 
 •	📋 Medical record collection 
@@ -12,11 +12,12 @@ Siro is a simple medical assistant system deployed on Streamlit. It consists of 
 •	💊 Medicine Search by text
 
 •	🧑‍⚕️ Doctor Diagnosis based on health records and system's predicted results.
-Siro 是开发者将AI应用到医疗问诊领域的一次尝试，开发者希望能够构建一个ai支持的医疗问诊系统，以达到节约医疗资源，提升看病流程的效率。
 
-> 🔗[Examples]
+Siro is a developer’s attempt to apply AI in the field of medical consultation. The developer aims to build an AI-supported medical consultation system to save medical resources and improve the efficiency of the healthcare process.
 
-## 💻 Setup instructions
+> 🔗[💻 Setup instructions](#-Setup-instructions)
+
+# 💻 Setup instructions
 ```bash
 pip install -r requirements.txt 
 ```
@@ -29,60 +30,85 @@ nltk.download('wordnet')
 ### 🌎 Project download
 Since the project includes some large datasets and models, you can click [here]( https://artslondon-my.sharepoint.com/:u:/g/personal/h_shi1220231_arts_ac_uk/EbucxCL38lZAv89_uEF4nqMBEgVGQAdXjatTz0fevaz3Sw?e=yKOfkh) to download them if needed and experience the full functionality.
 
-## 🐍 How to use
+# 🐍 How to use
 ### ▶️ Guided Video
-你可以通过一个引导视频来了解Siro的使用方法，但请注意，视频中存在一些关于模型准确率，损失方面的描述错误，请忽略这一部分的表述。
+You can learn how to use Siro through a [guided video]( https://artslondon-my.sharepoint.com/:v:/g/personal/h_shi1220231_arts_ac_uk/EZRiLR7vTodHjLo_POplW84BcP0sMflfkgqoXM__XElizw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FAD2Q7), but please note that the video contains some incorrect statements regarding the model’s accuracy and loss—please disregard those parts.
 
 ### 🧭 Usage Process 
-首先请在终端输入以下命令
+First, please enter the following command in the terminal:
 ```bash
 streamlit run medical_app.py
 ```
-它会在你默认的浏览器上打开streamlit网页
-您可以与网页上的各种功能进行交互，并通过switch page button 切换页面。
-流程体验的建议：请先体验medical record功能，并最后体验doctor diagnosis
+- It will open the Streamlit webpage in your default browser.
 
-## 📌 Example
+- You can interact with various features on the webpage and switch between pages using the switch page button.
+
+- Suggested usage flow: please try the medical record feature first, and finish by trying the doctor diagnosis feature.
+
+# 📌 Example
+
 ### 📋 Medical record collection 
-记录问询者的基本情况，包括生理性别，年龄，病史等
+Record the basic information of the patient, including biological sex, age, medical history, and so on.
 
 ![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/244500dda35806000e10f066bbf1fdcb793df00e/project_image/Medical%20record%20collection.png)
 
 ### 🧴 Skin disease diagnosis
-根据用户上传或者摄像头捕获的图片，进行皮肤疾病上的诊断
+Perform diagnosis of skin diseases based on images uploaded by the user or captured via the camera.
+
+![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/project_image/Skin%20disease%20diagnosis%201.png)
+
+![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/project_image/Skin%20disease%20diagnosis%202.png)
 
 ### 🤒 Symptom diagnosis
-用户可以通过语音或者文字输入症状，系统会给出一系列的医学诊断和建议，包括Symptom prediction， Disease Prediction,Doctor Recommendation， Disease Advice，Disease Severity，Medicine Use
+
+Users can input their symptoms via voice or text. The system will provide a series of medical diagnoses and recommendations, including Symptom Prediction, Disease Prediction, Doctor Recommendation, Disease Advice, Disease Severity assessment, and Medicine Use guidance.
+
+![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/project_image/Symptom%20Diagnosis.png)
+
+![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/project_image/Symptom%20Diagnosis%202.png)
+
+![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/project_image/Symptom%20Diagnosis%203.png)
+
 
 ### 💊 Medicine Search by text
-用户可以通过文字描述来找到对应的药物
+
+Users can find corresponding medicines by describing their symptoms or needs in text form.
+
+![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/project_image/Medicine%20search.png)
 
 ### 🧑‍⚕️ Doctor Diagnosis
-所有用户输入和得到的信息会被整理，交与医生进行二次的诊断和确认
 
-## 🚀 Updates
+All user inputs and the information obtained will be organized and provided to doctors for secondary diagnosis and confirmation.
 
+![generation_img](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/project_image/Doctor%20diagnosis.png)
+
+# 🚀 Updates
 **2025.05**
 The project underwent considerable adjustments in both code implementation and structure in order to better align with industry standards.
 
-- ©️ “clean code”: 对于文件，变量的命名进行统一和修改，规避了一些不规范的命名和大小写运用。
-- ©️ Functional modularization: Repetitive code, especially in Streamlit form construction, was refactored into modular functions to enhance clarity and reusability.同时，对于代码中的众多功能，开发者进行了不同的分类，并将它们用封装在一个package中。
-- ©️ 代码结构迭代：主要应用了程序主入口控制结构调整代码，方便后续的开发和维护
-- ©️ 异常处理：代码在多处功能间设置了异常捕获以及合理的错误提示，特别是在json文件的导入和存储方面，避免程序崩溃
-- ©️ Unit test：借助pytest/unittest对主要的医疗功能进行了测试
-- ©️ 设置配置文件：配置文件统一管理项目中使用的数据集，模型等项目级别的变量
+- ©️ “clean code”: The file and variable names have been standardized and modified to avoid irregular naming conventions and inconsistent use of letter cases.
 
-## Directory Structure
+- ©️ [Functional modularization](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/tree/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/medical_assistant_package): Repetitive code, especially in Streamlit form construction, was refactored into modular functions to enhance clarity and reusability.At the same time, the developer categorized the numerous functions in the code and encapsulated them within a single package.
+
+- ©️ Code structure iteration: Mainly applied adjustments to the program’s main entry control structure to facilitate subsequent development and maintenance.
+
+- ©️ Exception handling: The code includes exception capturing and appropriate error messages across multiple functions, especially in importing and saving JSON files, to prevent program crashes.
+
+- ©️ [Unit test](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/tree/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/tests)：The main medical functionalities were tested using pytest/unittest.
+
+- ©️ [Configuration File Setup](https://github.com/BreakzngGood/A-Simple-medical-assistant-system/blob/2bbbeb6af9fbbb9ce71a26c1be9123460728199e/medical_assistant_package/config.py): A configuration file is used to centrally manage project-level variables such as datasets and models.
+
+# 💾 Directory Structure
 ```
-|- medical_assistant_package/       (package include 配置文件，streamlit 功能，医疗功能等)
-    |- audio_utils.py             (音频处理功能)
-    |- config.py                (配置管理)
-    |- file_save.py             (文件保存功能)
-    |- load_datasets.py             (结合@st.cache_data优化的加载功能)
-    |- load_models.py               (结合@st.cache_data优化的加载功能)           
-    |- medical_functions.py             (核心医疗功能)
-    |- streamlit_navigation.py              (streamlit功能设计)
-    |- text_utils.py                (文字处理功能)      
+|- medical_assistant_package/       (The package includes configuration files and functions)
+    |- audio_utils.py             (Audio processing functionality)
+    |- config.py                (Configuration management)
+    |- file_save.py             (File saving functionality)
+    |- load_datasets.py             (Optimized loading using @st.cache_data)
+    |- load_models.py               (Optimized loading using @st.cache_data)           
+    |- medical_functions.py             (Core Medical Functionalities)
+    |- streamlit_navigation.py              (Streamlit Feature Design)
+    |- text_utils.py                (Text Processing Functionality)      
 |- model_train/           (models trained for the project)
     |- disease_prediciton_model.py             (Setfit model)
     |- doctor_recommendation_architecture.py            (model architecture)
@@ -94,9 +120,3 @@ The project underwent considerable adjustments in both code implementation and s
     |- image_classifier.py
     |- medicine_image_dowload.py                (Download images from the links from the dataset)
 ```
-
-
-## Link to project video recording: https://artslondon-my.sharepoint.com/:v:/g/personal/h_shi1220231_arts_ac_uk/EZRiLR7vTodHjLo_POplW84BcP0sMflfkgqoXM__XElizw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FAD2Q7
-
-
-3. For that, there are many big data in this project, you can download the complete project through this link: https://artslondon-my.sharepoint.com/:u:/g/personal/h_shi1220231_arts_ac_uk/EbucxCL38lZAv89_uEF4nqMBEgVGQAdXjatTz0fevaz3Sw?e=yKOfkh
