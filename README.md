@@ -15,7 +15,7 @@ Siro is a simple medical assistant system deployed on Streamlit. It consists of 
 
 Siro is a developer’s attempt to apply AI in the field of medical consultation. The developer aims to build an AI-supported medical consultation system to save medical resources and improve the efficiency of the healthcare process.
 
-> 🔗[Setup instructions] • (#-Setup-instructions) • [How to use](#-How-to-use) • [Example](#-Example)
+> 🔗[Setup instructions](#-Setup-instructions) • [How to use](#-How-to-use) • [Example](#-Example)
  • [Updates](#-Updates) • [Directory Structure](#-Directory-Structure)
 
 # 💻 Setup instructions
