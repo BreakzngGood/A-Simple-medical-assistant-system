@@ -4,9 +4,13 @@
 Siro is a simple medical assistant system deployed on Streamlit. It consists of five main functional modules:
 
 •	Medical record collection 
+
 •	Skin disease diagnosis based on picture prediction
+
 •	Symptom diagnosis based on text input (Also includes disease prediction, severity Assessment, Medical Advice, and doctor and medicine recommendation.)
+
 •	Medicine Search by text
+
 •	Doctor Diagnosis based on health records and system's predicted results.
 
 > 🔗[Examples]
