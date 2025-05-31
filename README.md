@@ -1,10 +1,28 @@
-# AI-4-Media-Project-Template (24/25)
+> Notice: This medical system is in a very early stage of development and poses significant risks if used in real-world settings. Please do not rely on or reference it for medical advice or diagnosis.
 
-## Student name: Hao Shi
+# 🧬 Siro
+Siro is a simple medical assistant system deployed on Streamlit. It consists of five main functional modules:
 
-## Student number: 24006793
+•	Medical record collection 
+•	Skin disease diagnosis based on picture prediction
+•	Symptom diagnosis based on text input (Also includes disease prediction, severity Assessment, Medical Advice, and doctor and medicine recommendation.)
+•	Medicine Search by text
+•	Doctor Diagnosis based on health records and system's predicted results.
 
-## Project title: A Simple Medical Assistant System
+> 🔗[Examples]
+
+# 💻 Setup instructions
+```bash
+pip install -r requirements.txt 
+```
+If you encounter any nltk-related errors during runtime, please download the required resources manually.
+```bash
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet') 
+```
+Since the project includes some large datasets and models, you can click [here]( https://artslondon-my.sharepoint.com/:u:/g/personal/h_shi1220231_arts_ac_uk/EbucxCL38lZAv89_uEF4nqMBEgVGQAdXjatTz0fevaz3Sw?e=yKOfkh) to download them if needed and experience the full functionality.
+
 
 ## Link to project video recording: https://artslondon-my.sharepoint.com/:v:/g/personal/h_shi1220231_arts_ac_uk/EZRiLR7vTodHjLo_POplW84BcP0sMflfkgqoXM__XElizw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FAD2Q7
 
