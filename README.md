@@ -29,7 +29,7 @@ nltk.download('stopwords')
 nltk.download('wordnet') 
 ```
 ### 🌎 Project download
-Since the project includes some large datasets and models, you can click [here]( https://artslondon-my.sharepoint.com/:u:/g/personal/h_shi1220231_arts_ac_uk/EbucxCL38lZAv89_uEF4nqMBEgVGQAdXjatTz0fevaz3Sw?e=yKOfkh) to download them if needed and experience the full functionality.
+Since the project includes some large datasets and models, you can click [here](https://artslondon-my.sharepoint.com/:u:/g/personal/h_shi1220231_arts_ac_uk/EXUQDTja-AZBiZkQ84sxMBMBrfP-pZjJLCvnH2maDU0R4w?e=atTjm6 ) to download them if needed and experience the full functionality.
 
 # 🐍 How to use
 ### ▶️ Guided Video
